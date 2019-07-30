@@ -1,0 +1,43 @@
+{ "program":{
+
+    "configuration":{
+      "name":"spqr",
+      "description":"Static Website Generator"
+    },
+
+    "actions":[
+      {
+        "configuration":{
+          "name":"New Site"
+        },
+
+        "parameters":[
+          {"name": "Site Name", "description":"Site name, example: My Blog."},
+          {"name": "Site Root Path", "description":"Path to te directory where the site will be generated."},
+          {"name": "Template Name", "description":"Name of template, must match one of the tamplates offered by system."}
+        ],
+
+        "actions":[
+          {
+            "name":"Create base directories",
+            "description":"All sites use a certain base specific to spqr, the base can be though of as the initial template.",
+            "imports": [{"name": "fs"}, {"name":"path"}],
+            "parameters":[{"name":"siteName"}, {"name":"siteRootPath"}]
+          },
+          {
+            "name":"Create package json",
+            "description":"Keep track of dependencies and open the possibility of publishing to npm and similar.",
+            "imports": [{"name": "fs"}, {"name":"path"}],
+            "parameters":[{"name":"siteName"}, {"name":"siteRootPath"}]
+          },
+          {
+            "name":"Apply selected template",
+            "description":"Apply the design template/theme.",
+            "imports": [{"name": "fs"}, {"name":"path"}],
+            "parameters":[{"name":"siteName"}, {"name":"siteRootPath"}, {"name":"templateName"}]
+          }
+        ]
+      }
+    ]
+  }
+}
