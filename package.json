@@ -1,0 +1,24 @@
+{
+  "name": "action-toolkit",
+  "version": "1.1.0",
+  "description": "Action toolkit for action.json files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.20.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fantasyui-com/action-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fantasyui-com/action-toolkit/issues"
+  },
+  "homepage": "https://github.com/fantasyui-com/action-toolkit#readme"
+}
